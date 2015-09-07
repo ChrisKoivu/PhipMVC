@@ -1,0 +1,13 @@
+
+
+Just styling an <input type="submit" class="linkButton" /> like this worked for me:
+
+.linkButton { 
+     background: none;
+     border: none;
+     color: #0066ff;
+     text-decoration: underline;
+     cursor: pointer; 
+}
+
+Tested in Chrome, IE 7-9, Firefox
