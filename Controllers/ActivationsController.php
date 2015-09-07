@@ -40,16 +40,16 @@ class ActivationsController extends Controller
      
     public function index()
     {
-        $this->_view->set_header('splotch.header.php');
-        $this->_view->set_footer('splotch.footer.php');
+       $this->_view->set_header();
+       $this->_view->set_footer();
         return $this->_view->render();   
     }   // end index action
 
     public function confirm($url_query)
     {
         
-        $this->_view->set_header('splotch.header.php');
-        $this->_view->set_footer('splotch.footer.php');
+       $this->_view->set_header();
+       $this->_view->set_footer();
              
         parse_str($url_query);
         $this->result = $this->_model->activate_user($email, $key);

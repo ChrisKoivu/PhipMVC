@@ -34,8 +34,8 @@ class HomeController extends Controller
     {
         try {     
            Session::clear_error_output();
-           $this->_view->set_header('splotch.header.php');
-           $this->_view->set_footer('splotch.footer.php'); 
+           $this->_view->set_header();
+           $this->_view->set_footer();
            $username = Session::get('username');
            if (empty($username)){         
               Session::redirect(DEFAULT_PAGE);    

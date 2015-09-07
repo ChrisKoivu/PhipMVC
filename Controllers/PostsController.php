@@ -39,8 +39,8 @@ class PostsController extends Controller
         try {
           
             //this part works right
-            $this->_view->set_header('splotch.header.php');
-            $this->_view->set_footer('splotch.footer.php');
+            $this->_view->set_header();
+            $this->_view->set_footer();
             $posts= $this->_model->getPosts();              
             $this->_view->set('posts',$posts);
             //-------------------------------

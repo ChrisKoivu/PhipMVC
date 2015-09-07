@@ -76,7 +76,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             
         <?php 
         
-        print Session::get_user_data('username');
         
         include($this->footer); ?>  
        
