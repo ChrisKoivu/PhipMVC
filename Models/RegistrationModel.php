@@ -80,7 +80,7 @@ Class RegistrationModel extends Model {
          $message = " To activate your account, please click on this link:\n\n";
          $message .= DEFAULT_WEBSITE_URL . 'Activations/confirm/email=' . urlencode(trim($email)) . 
          "/key=$activate_key";
-         Email::init($email, 'Confirm Registration to Splotchy!', $message);
+         Email::init($email, 'Confirm Registration to ' . DEFAULT_HOSTNAME, $message);
          Email::send_mail();        
          return TRUE;
     }
