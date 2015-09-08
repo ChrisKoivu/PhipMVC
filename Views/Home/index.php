@@ -31,7 +31,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       <!-- Page content  -->
       <!-- ?php echo dirname(__FILE__); Shows directory where file is located ?-->
         <div class="panel panel-default">
-      <div class="panel-heading"> <h4>Splotches! </h4></div>
+      <div class="panel-heading"> <h4>Posts </h4></div>
    	<div class="panel-body">
             <ul class="list-group">
               <?php //$this->get($posts); ?> 
