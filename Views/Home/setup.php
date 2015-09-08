@@ -26,7 +26,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         * this page  */   
      
         
-        print Session::get_user_data('username');
         
         include($this->footer);
         
