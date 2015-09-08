@@ -18,6 +18,12 @@ This project is a PHP MVC framework that has twitter bootstrap integrated into t
     3. Database configuration
        * you need to have the pdo driver that corresponds to your chosen 
        database.
+    4. System configuration
+       * setup your passwords, your default settings in the /Config/config.php file.
+    5. Route configuration
+       * setup your default webpage in the index.php file in the route. this determines 
+       what page is the default page to launch when the http address is entered in the 
+       address bar
 ### Contribution guidelines ###
 
 * Writing tests
