@@ -38,7 +38,7 @@ define('DEFAULT_ADMIN_EMAIL',  NULL);
 define('DEFAULT_WEBSITE_URL', 'http://localhost/');
 define('DEFAULT_HOSTNAME',  NULL);
 
-/* sendgrid settings */
+/* sendgrid settings. this is used for sending emails to validate user on registration */
  define('SENDGRID_USERNAME', NULL);
  define('SENDGRID_PASSWORD', NULL);
  define('SENDGRID_URL','https://api.sendgrid.com/');
