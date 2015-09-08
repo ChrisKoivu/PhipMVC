@@ -25,7 +25,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       include($this->header);
        
       
-      Components::insert_panel('Splotches!',$this->get('posts'));
+      Components::insert_panel(DEFAULT_HOSTNAME, $this->get('posts'));
       Components::insert_table($this->get('posts'),'Records','table table-striped','','Posts');
        
    
