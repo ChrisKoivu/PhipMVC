@@ -21,6 +21,9 @@ This project is a PHP MVC framework that has twitter bootstrap integrated into t
        database.
     4. System configuration
        * setup your passwords, your default settings in the /Config/config.php file.
+       * For the email validation, password change, and user activation
+       functionality, you need to sign up for Azure, and install the sendgrid
+       service. 
     5. Route configuration
        * setup your default webpage in the index.php file in the route. this determines 
        what page is the default page to launch when the http address is entered in the 
