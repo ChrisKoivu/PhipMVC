@@ -33,7 +33,17 @@ class PostsController extends Controller
      
     }
      
-  
+  public function add_post() {
+   if (isset($_POST['submit']))
+   {
+     if(! $this->_model->add_post(NULL, $_POST['comments'])){
+         Session::set_error_output('Unable to add post');   
+     } 
+     unset($_POST);
+     Session::redirect('/posts/index');
+   }
+ }
+ 
     public function index()
     {
         try {
