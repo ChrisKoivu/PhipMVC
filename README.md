@@ -10,8 +10,9 @@ This project is a PHP MVC framework that has twitter bootstrap integrated into t
 
 ### How do I get set up? ###
     1. Setup
-        * Copy the folders, index.php, .htaccess, and web.config 
+        * Copy the folders, index.php, .htaccess, and web.config
         files to your server's root directory.
+        * Rename .htaccess.txt to .htaccess
     2. Configuration
         * enable url rewriting for your server software. For Apache,
         visit: http://httpd.apache.org/docs/2.0/misc/rewriteguide.html
@@ -24,6 +25,8 @@ This project is a PHP MVC framework that has twitter bootstrap integrated into t
        * setup your default webpage in the index.php file in the route. this determines 
        what page is the default page to launch when the http address is entered in the 
        address bar
+       
+       
 ### Contribution guidelines ###
 
 * Writing tests
