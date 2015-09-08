@@ -33,18 +33,16 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
          HtmlBuilder::start_view_block('div', '',' ' , 'background-color:white; '
                  . 'height:250px; width: 100%; padding-left: 30px;border-style:'
                  . 'solid;border-width:2px;border-radius:5px;');
-         HtmlBuilder::start_form('posts', 'index', 'post');
+         HtmlBuilder::start_form('posts', 'add_post', 'post');
         
          HtmlBuilder::start_view_block('div', '','input-group' , '');
-         HtmlBuilder::start_view_block('div', '','input-group-btn' , '');
-         HtmlBuilder::insert_html_tag('button', '', 'btn btn-default', '', '+1');
-         HtmlBuilder::start_view_block('button', '','btn btn-default' , '');
+        HtmlBuilder::insert_button("submit", "btn btn-default", "submit","submit");       
          self::insert_glyphicon('glyphicon-share');
          HtmlBuilder::end_view_block('button');     
-         HtmlBuilder::end_view_block('div');
+         
          HtmlBuilder::end_view_block('div');
         
-        HtmlBuilder::insert_textarea();
+        HtmlBuilder::insert_textarea('comment', 'comment');
        
         HtmlBuilder::end_view_block('form');
         HtmlBuilder::end_view_block('div');
@@ -54,6 +52,9 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         print '<span class="glyphicon ' . $glyph_name .'"></span>' . $text;
     }
     
+    public static function insert_image($image_name,$img_height='228px', $img_width='304px'){
+      print '<img src="' . $image_name . '" ' . '  style="width: ' . $img_width . '; height:' . $img_height. '; ">';
+    }
     public static function insert_login_form($controller, $action, $form_method, $form_heading){       
        HtmlBuilder::start_view_block('div', 'main','' , "padding-left: 30px;");       
        HtmlBuilder::insert_html_tag('h2', '', '','' , ucwords($form_heading));
@@ -68,7 +69,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
        HtmlBuilder::insert_html_tag('pgraph');
        HtmlBuilder::insert_html_tag('pgraph');
        /* insert twitter-bootstrap submit button */
-       HtmlBuilder::insert_button("submit", "btn btn-primary", "submit","Login");   
+       HtmlBuilder::insert_button("submit", "btn btn-primary", "submit","Login"); 
+       HtmlBuilder::end_view_block('button');    
        HtmlBuilder::start_view_block('p', '','' , '');
        HtmlBuilder::insert_link('login', '', '', '','Cancel');
        print ' | ';
@@ -92,7 +94,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         HtmlBuilder::insert_html_tag('pgraph');
         HtmlBuilder::insert_html_tag('pgraph');
         HtmlBuilder::insert_html_tag('pgraph');
-        HtmlBuilder::insert_button("submit", "btn btn-primary", "submit","submit");   
+        HtmlBuilder::insert_button("submit", "btn btn-primary", "submit","submit"); 
+        HtmlBuilder::end_view_block('button');    
         HtmlBuilder::start_view_block('p', '','' , '');
         HtmlBuilder::insert_link('login', '', '', '','Cancel');
         HtmlBuilder::end_view_block('p');

@@ -137,7 +137,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
        $_button_caption = filter_var($button_caption, FILTER_SANITIZE_STRING);            
        print '<button type="' . lcfirst($_type) . '" class="' .$_class.'" name="' 
                . $_default_name . '">' . $_button_caption . 
-               '</button>' . PHP_EOL;
+               PHP_EOL;
      
   } // end of insert button method
    /**
@@ -219,9 +219,9 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
        print '</' . $tag. '>'. PHP_EOL;
   }    
   
-    public static function insert_textarea(){
-        print '<textarea rows="10" cols = "100">'; 
-         
+    public static function insert_textarea($name = NULL, $id=NULL){
+        print '<textarea name ="' . $name . '" rows="10" cols = "100" id="' 
+                  . $id . '" >';         
         print '</textarea>'. PHP_EOL;
     }
     
