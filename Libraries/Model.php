@@ -125,8 +125,10 @@ class Model
     
     protected function get_datetime() {
        $objDateTime = new DateTime('NOW');
-       $date_time = $objDateTime->format('Y-m-d H:i:s');       
+       $date_time = $objDateTime->format('Y-m-d H:i:s');      
+       //$phpdate = strtotime($date_time);
        return $date_time;
+       //return $phpdate;
     }
 
      protected function is_admin($uid)    
