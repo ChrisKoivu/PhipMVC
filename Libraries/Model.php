@@ -123,6 +123,12 @@ class Model
         }
     }
     
+    protected function get_date_time() {
+       $objDateTime = new DateTime('NOW');
+       $date_time = $objDateTime->format('Y-m-d H:i:s');       
+       return $date_time;
+    }
+
      protected function is_admin($uid)    
     {   
         $query = "SELECT user_id FROM users_in_roles UIR INNER JOIN roles R on 
