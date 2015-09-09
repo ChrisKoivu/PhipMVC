@@ -35,15 +35,14 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                  . 'solid;border-width:2px;border-radius:5px;');
          HtmlBuilder::start_form('posts', 'add_post', 'post');
         
-         HtmlBuilder::start_view_block('div', '','input-group' , '');
-        HtmlBuilder::insert_button("submit", "btn btn-default", "submit","submit");       
-         self::insert_glyphicon('glyphicon-share');
-         HtmlBuilder::end_view_block('button');     
          
-         HtmlBuilder::end_view_block('div');
         
         HtmlBuilder::insert_textarea('comment', 'comment');
-       
+        HtmlBuilder::start_view_block('div', '','input-group' , '');
+        HtmlBuilder::insert_button("submit", "btn btn-default", "submit","submit");       
+        self::insert_glyphicon('glyphicon-share');
+        HtmlBuilder::end_view_block('button');    
+        HtmlBuilder::end_view_block('div');
         HtmlBuilder::end_view_block('form');
         HtmlBuilder::end_view_block('div');
     }
