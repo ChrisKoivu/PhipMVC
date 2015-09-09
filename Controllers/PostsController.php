@@ -37,7 +37,7 @@ class PostsController extends Controller
         $username = Session::get('username');
         if (isset($_POST['submit']))
          {
-          if(! $this->_model->add_post($username, $_POST['comments'])){
+          if(! $this->_model->add_post($username, $_POST['comment'])){
             Session::set_error_output('Unable to add post');   
           } 
          unset($_POST);
