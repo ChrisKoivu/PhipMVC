@@ -48,11 +48,12 @@ class PostModel extends Model
   }
 
 
-    function add_post($title, $body)
+     function add_post($title, $body)
     {
+       $datetime = $this->get_datetime();
        $new_post = "INSERT INTO posts (title, body, created, modified) VALUES (?, ?, ?, ?)";
        $this->_setSql($new_post);
-       $this->add_record(array($title, $body, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP));
+       $this->add_record(array($title, $body, $datetime, $datetime));
     }
  
     public function getPosts()
