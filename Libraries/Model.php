@@ -123,7 +123,7 @@ class Model
         }
     }
     
-    protected function get_date_time() {
+    protected function get_datetime() {
        $objDateTime = new DateTime('NOW');
        $date_time = $objDateTime->format('Y-m-d H:i:s');       
        return $date_time;
