@@ -30,8 +30,8 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  Class Components {
  
     public static function insert_comment_form(){
-         HtmlBuilder::start_view_block('div', '',' ' , 'background-color:white; '
-                 . 'height:250px; width: 100%; padding-left: 30px;border-style:'
+         HtmlBuilder::start_view_block('div', '',' ' , 'background-color:white;'
+                 . 'height:100%; width: 100%; padding: 30px;border-style:'
                  . 'solid;border-width:2px;border-radius:5px;');
          HtmlBuilder::start_form('posts', 'add_post', 'post');
         
@@ -139,7 +139,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         $fields = array_keys($array[1]);  
 
         HtmlBuilder::insert_html_tag('h2', '', '','' , ucwords($headingName));
-        HtmlBuilder::start_view_block('div', '','panel panel-default' , 'border-radius:5px;border-style:solid;border-width:2px;');
+        HtmlBuilder::start_view_block('div', '','panel panel-default' , 'border-radius:5px;border-style:solid;border-width:2px; height: 100%;');
         HtmlBuilder::start_view_block('div', '','panel-heading' , '');       
         HtmlBuilder::insert_link('#', '', 'pull-right', '', 'View All');
         HtmlBuilder::end_view_block('a'); 
@@ -165,6 +165,30 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
          HtmlBuilder::end_view_block('div'); 
     }//end insert posts panel function
     
+    public static function insert_posts_panel($headingName, $array){    
+       
+        HtmlBuilder::insert_html_tag('h2', '', '','' , ucwords($headingName));
+        HtmlBuilder::start_view_block('div', '','panel panel-default' , 'border-radius:5px;border-style:solid;border-width:2px; height: 100%;');
+        HtmlBuilder::start_view_block('div', '','panel-heading' , '');       
+        HtmlBuilder::insert_link('#', '', 'pull-right', '', 'View All');
+        HtmlBuilder::end_view_block('a'); 
+        HtmlBuilder::end_view_block('div'); 
+        HtmlBuilder::start_view_block('div', '','panel-body' , '');
+        HtmlBuilder::start_view_block('ul', '','list-group' , '');
+
+   
+          foreach ($array as $value){
+            HtmlBuilder::start_view_block('li', '','list-group-item' , '');
+            HtmlBuilder::insert_html_tag('span',  'username', '','font-weight:bold;' ,  $value['title']);
+            HtmlBuilder::insert_html_tag('span',  'created', '','float: right;' ,  'Posted on ' . $value['created']);
+            HtmlBuilder::insert_html_tag('br', '', '','' , ''); 
+            HtmlBuilder::insert_html_tag('span',  'message', '','' , $value['body']);
+            HtmlBuilder::end_view_block('li');          
+          }  
+         HtmlBuilder::end_view_block('ul');          
+         HtmlBuilder::end_view_block('div');  
+         HtmlBuilder::end_view_block('div'); 
+    }//end insert posts panel function
    
     
  }

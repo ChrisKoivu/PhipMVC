@@ -221,7 +221,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   
     public static function insert_textarea($name = NULL, $id=NULL){
         print '<textarea name ="' . $name . '" rows="10" cols = "100" id="' 
-                  . $id . '" >';         
+                  . $id . '" style="margin-left: auto; margin-right: auto; " >';         
         print '</textarea>'. PHP_EOL;
     }
     

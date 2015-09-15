@@ -25,9 +25,10 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       include($this->header);
        
       
-      Components::insert_panel(DEFAULT_HOSTNAME, $this->get('posts'));
+      Components::insert_posts_panel(DEFAULT_HOSTNAME ,$this->get('posts'));
+      Components::insert_comment_form(); 
       Components::insert_table($this->get('posts'),'Records','table table-striped','','Posts');
-       
+      
    
             
        include($this->footer); 
