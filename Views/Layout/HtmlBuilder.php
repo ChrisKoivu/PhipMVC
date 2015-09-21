@@ -109,6 +109,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
        }      
   }
   
+  public static function insert_image($src, $alt, $class) {
+    print '<img src="' . $src . '" alt ="'.$alt.'" class="' . $class . '"/>';      
+    print PHP_EOL;
+  }
+  
   public static function insert_jscript($javascript_name){
       $js = filter_var($javascript_name, FILTER_SANITIZE_STRING);     
       print '<script src="/Views/js/'. $javascript_name . '"></script>';      

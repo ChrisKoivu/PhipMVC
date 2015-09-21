@@ -190,7 +190,74 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
          HtmlBuilder::end_view_block('div'); 
     }//end insert posts panel function
    
+    public static function insert_carousel_block(){
+        $img_path = DEFAULT_WEBSITE_URL . DS . 'Views' . DS;
+        $top_image = '..//Views//Images/top.jpg';
+        
+        $pic_array = array(
+            'picture 1'  => '..//Views//Images/pic1.jpg', 
+            'picture 2'  => '..//Views//Images/pic2.jpg',  
+            'picture 3'  => '..//Views//Images/pic3.jpg',  
+            'picture 4'  => '..//Views//Images/pic4.jpg'
+        );
+        self::generate_carousel_block($top_image, $pic_array);
+    }
     
+    public static function generate_carousel_block($top_image, $picture_array){
+        print '<div id = "myCarousel" class = "carousel slide" data-ride = "carousel">';
+        print '<ol class = "carousel-indicators">';
+        print '<li data-target = "#myCarousel" data-slide-to = "1"></li>';
+        print '<li data-target = "#myCarousel" data-slide-to = "2"></li>';
+        print '<li data-target = "#myCarousel" data-slide-to = "3"></li>';
+        print '<li data-target = "#myCarousel" data-slide-to = "4"></li>';
+        print '<li data-target = "#myCarousel" data-slide-to = "5"></li>';
+        print '</ol>';
+        print '<div class="carousel-inner" role="listbox">';
+        
+        print '<div class = "item active">';
+       HtmlBuilder::insert_image($top_image,'top image' , '');
+        print '</div>';
+        foreach ($picture_array as $key=>$val){
+          print '<div class = "item">';
+          HtmlBuilder::insert_image($val, $key,'');  
+          print '</div>';
+        }
+        HtmlBuilder::end_view_block('div');
+        
+        
+        print '<a  class = "left carousel-control" href="#myCarousel" role = "button" data-slide="prev">';
+        print '<span class = "glyphicon glyphicon-chevron-left" aria-hidden="true"></span>';
+        print '<span class = "sr-only">Previous</span>';   
+        print '</a>';
+        
+        print '<a  class = "right carousel-control" href="#myCarousel" role = "button" data-slide="next">';
+        print '<span class = "glyphicon glyphicon-chevron-right" aria-hidden="true"></span>';
+        print '<span class = "sr-only">Next</span>';   
+        print '</a>';
+        print '</div>';
+    }
+    
+    public static function insert_fader_block(){
+        $img_path = DEFAULT_WEBSITE_URL . DS . 'Views' . DS;
+        $top_image = '..//Views//Images/top.jpg';
+        
+        $pic_array = array(
+            'picture 1'  => '..//Views//Images/pic1.jpg', 
+            'picture 2'  => '..//Views//Images/pic2.jpg',  
+            'picture 3'  => '..//Views//Images/pic3.jpg',  
+            'picture 4'  => '..//Views//Images/pic4.jpg'
+        );
+        self::generate_fader_block($top_image, $pic_array);
+    }
+    
+    public static function generate_fader_block($top_image, $picture_array){
+        HtmlBuilder::start_view_block('div', 'fader','','');
+        HtmlBuilder::insert_image($top_image,'top image' , 'active');      
+        foreach ($picture_array as $key=>$val){
+          HtmlBuilder::insert_image($val, $key,'');  
+        }
+        HtmlBuilder::end_view_block('div');
+    }
  }
  
  

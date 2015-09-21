@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
    
 <?php    
@@ -33,9 +33,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                                 'content'=>"width=device-width, initial-scale=1, "
                                 . "maximum-scale=1"));   
    $this->insert_jscript("jquery-1.11.3.min.js");
-   $this->insert_jscript("bootstrap.min.js");   
+   $this->insert_jscript("bootstrap.min.js"); 
+   $this->insert_jscript("fader.js");   
    $this->insert_css("bootstrap.min.css");
    $this->insert_css("styles.css");
+   $this->insert_css("fader.css");
 ?>           
  
  <?php 
@@ -45,6 +47,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
        Navbar::insert_navbar(DEFAULT_HOSTNAME,'#');
        HtmlBuilder::end_view_block('head');
        HtmlBuilder::start_view_block('body', '', '', '');
+       Components::insert_carousel_block();
        HtmlBuilder::start_view_block('div', '', 'container', '');
 
        
