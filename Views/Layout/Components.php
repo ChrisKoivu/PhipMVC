@@ -223,8 +223,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
           print '</div>';
         }
         HtmlBuilder::end_view_block('div');
-        
-        
+        self::add_carousel_controls();        
+        print '</div>';
+    }
+    
+    private function add_carousel_controls() {      
         print '<a  class = "left carousel-control" href="#myCarousel" role = "button" data-slide="prev">';
         print '<span class = "glyphicon glyphicon-chevron-left" aria-hidden="true"></span>';
         print '<span class = "sr-only">Previous</span>';   
@@ -233,8 +236,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         print '<a  class = "right carousel-control" href="#myCarousel" role = "button" data-slide="next">';
         print '<span class = "glyphicon glyphicon-chevron-right" aria-hidden="true"></span>';
         print '<span class = "sr-only">Next</span>';   
-        print '</a>';
-        print '</div>';
+        print '</a>';         
     }
     
     public static function insert_fader_block(){
