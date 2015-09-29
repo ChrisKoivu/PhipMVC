@@ -1,5 +1,11 @@
 # README #
 
+
+                  CONTROLLER   <---  User
+                 /          \     
+               MODEL        VIEW              
+
+
 * Quick summary: 
 This project is a PHP MVC framework that has twitter bootstrap integrated into the views. The design includes hashing and encryption algorithms for security, as well as URL rewriting to hide the directory structure. For the Models, I am using PDO database drivers and prepared statements to guard against SQL injection attacks. I also am integrating JSON, Ajax, CSV, and PDF creation utilities.
 
