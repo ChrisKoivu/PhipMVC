@@ -6,7 +6,11 @@
      
        // node constructor
        public static function  __construct($this_array = NULL){ 
-          self::$field_data_array = $this_array;          
+          if (! empty(self::$field_data_array) {
+            self::$field_data_array[] = $this_array; 
+          }else{
+            self::$field_data_array = $this_array; 
+          }
        }
  
        // returns data
