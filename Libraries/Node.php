@@ -1,22 +1,22 @@
 <?php 
 
     class Node{
-       private static $data;
+       private static $field_data_array = array();
      
      
        // node constructor
-       public static function  __construct($array_data = NULL){ 
-          $this->data = $array_data;          
+       public static function  __construct($this_array = NULL){ 
+          self::$field_data_array = $this_array;          
        }
  
        // returns data
-       public static function getData($key){		
-	 return $this->data[$key];        
+       public static function getData($field){		
+	     return self::$field_data_array[$field];        
        }
 	 
        //standard Java-like toString function
        public static function __toString() {
-         print_r($data);
+         print_r($field_data_array);
        }
  
     }
