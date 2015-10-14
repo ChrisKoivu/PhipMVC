@@ -11,6 +11,11 @@
           }
        }
  
+        // add data field and value to node
+       public static function addData($field, $data){		
+	     self::$field_data_array[$field] = $data;        
+       }
+       
        // returns data
        public static function getData($field){		
 	     return self::$field_data_array[$field];        
