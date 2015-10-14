@@ -1,5 +1,10 @@
 <?php 
-
+    /**
+      This class was designed to include a node for a customizable object like 
+      the entity methodology used in Drupal 7, for customizable data types, instead
+      of a standard pre-defined node.    
+    */
+    
     class Node{
        private static $field_data_array = array();
      
