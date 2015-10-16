@@ -47,8 +47,8 @@ Class Session
 
 public static function clear_user_data( ){
   self::set('username', NULL);
-  self::set('uid', NULL);
-  self::set('admin', NULL);
+  self::set('uid', 0);
+  self::set('admin', FALSE);
 }
 	 Public static function set($key, $value)
 	 {
