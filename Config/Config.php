@@ -24,7 +24,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 /* database settings */
 define ('DB_HOST',  'localhost');
-define ('DB_NAME',  NULL);
+define ('DB_NAME',  'phipmvc');
 define ('DB_USER',   NULL);
 define ('DB_PASS',   NULL);
 
