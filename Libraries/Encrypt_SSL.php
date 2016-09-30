@@ -51,4 +51,3 @@ $strDecrypted = decrypt($strEncrypted, $arrKeys['private']);
 echo $strDecrypted;
 
 
-Note: All PHP functions are hyperlin
