@@ -29,9 +29,12 @@ Class Session
       
 
         Public static function init() {
+          // check for current session
           if (!self::get('session'))
-          {
+          { 
+            //create session if non-existent, suppress errors.
             @Session_start();
+	    // set flag that session was created
             self::set('session',TRUE);            
           }          
         
