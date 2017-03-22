@@ -16,13 +16,17 @@ CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFT
 ////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 
+// this file handles our mvc routing
 define ('DS', DIRECTORY_SEPARATOR);
 define ('HOME', dirname(__FILE__));
 define('DEFAULT_PAGE','/Users/index');
  
 ini_set ('display_errors', 1);
  
+// define our database configurations. this file is loaded when page is accessed
 require_once HOME . DS . 'Config'. DS . 'Config.php';
+
+// this file handles the mvc requests as they come in
 require_once HOME . DS . 'Libraries' . DS . 'Core.php';
  
 function __autoload($class)
