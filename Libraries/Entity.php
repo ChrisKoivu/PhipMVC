@@ -24,7 +24,7 @@ Class Entity
 {
        private $fields = array();
       
-        Public function __construct($object_fields) {
+        Public function __construct($object_fields=array ()) {
            $this->fields = $object_fields;        
         } 
     
