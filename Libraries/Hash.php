@@ -66,6 +66,7 @@ class Hash {
     }
   }
   
+  /* verifies what hashing algorithms are available. Uses Blowfish by default */
   private static function hash_select(){
     try {
         if(CRYPT_BLOWFISH == 1){
