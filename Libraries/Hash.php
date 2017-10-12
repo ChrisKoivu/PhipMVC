@@ -43,6 +43,7 @@ class Hash {
      return crypt($value, $salt);    
   }
   
+  /* uses the CRYPT_BLOWFISH algorithm to hash the password */
   public static function hash_password($password){
     $options = [
     'cost' => 12,
