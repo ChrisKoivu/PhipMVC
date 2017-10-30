@@ -47,11 +47,7 @@ class PostsController extends Controller
  
     public function index()
     {
-        try {
-          
-            //this part works right
-            $this->_view->set_header();
-            $this->_view->set_footer();
+        try {          
             $posts= $this->_model->getPosts();              
             $this->_view->set('posts',$posts);
             //-------------------------------
