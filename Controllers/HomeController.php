@@ -33,9 +33,7 @@ class HomeController extends Controller
     public function index()
     {
         try {     
-           Session::clear_error_output();
-           $this->_view->set_header();
-           $this->_view->set_footer();
+           Session::clear_error_output();         
            $username = Session::get('username');
            if (empty($username)){         
               Session::redirect(DEFAULT_PAGE);    
