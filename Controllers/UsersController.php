@@ -39,16 +39,14 @@ class UsersController extends Controller
      
     public function index()
     {
-        $this->_view->set_header();
-        $this->_view->set_footer();
+       
         return $this->_view->render();   
     }   // end login method 
     
     public function login()
     {
             Session::clear_user_data( );
-           $this->_view->set_header();
-           $this->_view->set_footer(); 
+           
            $this->_model->__initialize();      
             
         
@@ -71,8 +69,6 @@ class UsersController extends Controller
        
     public function forgot_password() {
         
-        $this->_view->set_header();
-        $this->_view->set_footer();
          if (isset($_POST['submit'])){
              $this->_model->forgot_password($_POST['email']);             
              $this->_view->set('forgot_pw_header','Please check your email for '
@@ -102,8 +98,6 @@ class UsersController extends Controller
     }
    
     public function change_password($url_query){    
-       $this->_view->set_header();
-       $this->_view->set_footer();
        $this->_view->set('error', 'this is an error');
        $valid_link = $this->_model->verify_link($url_query);          
        if(! $valid_link){
