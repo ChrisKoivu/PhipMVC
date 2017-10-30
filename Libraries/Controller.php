@@ -35,8 +35,8 @@ class Controller
         }
         $this->_controller = ucwords(__CLASS__);
         $this->_action = $action;       
-        $this->_modelBaseName = $model;
-        $this->_view = new View(HOME . DS . 'Views' . DS . $this->_modelBaseName . DS . $action . '.php');
+        $this->_modelBaseName = $model;        
+        $this->_setView($action);
         $this->_view->set_header();
         $this->_view->set_footer();
         Session::init();    
