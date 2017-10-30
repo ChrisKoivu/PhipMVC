@@ -39,9 +39,7 @@ class ActivationsController extends Controller
     }//end of constructor
      
     public function index()
-    {
-       $this->_view->set_header();
-       $this->_view->set_footer();
+    {       
         return $this->_view->render();   
     }   // end index action
 
