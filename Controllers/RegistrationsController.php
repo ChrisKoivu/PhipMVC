@@ -34,9 +34,7 @@ class RegistrationsController extends Controller {
     
     public function register()
     {
-        try {               
-            $this->_view->set_header();
-            $this->_view->set_footer();
+        try { 
             $this->_model->__initialize();       
             if (isset($_POST['submit']))
             {
